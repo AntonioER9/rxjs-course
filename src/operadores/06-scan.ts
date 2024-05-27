@@ -46,4 +46,3 @@ const id$ = state$.pipe(
 );
 
 id$.subscribe( console.log );
-
