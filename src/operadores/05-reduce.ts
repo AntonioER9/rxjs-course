@@ -11,8 +11,8 @@ const totalReducer = ( acumulador: number, valorActual: number ) => {
 const total = numbers.reduce( totalReducer, 0 );
 console.log('total arr', total );
 
-interval(500).pipe(
-    take(6),
+interval(500).pipe( //observable
+    take(6), //completa el observable luego de la cantidad de veces que se le indique.
     tap( console.log ),
     reduce( totalReducer )
 )
