@@ -18,7 +18,7 @@ const input$ = fromEvent( input, 'keyup' );
 input$.pipe(
     debounceTime(1000),
     pluck('target','value'),
-    distinctUntilChanged()
+    distinctUntilChanged()// si no cambia el valor no vuelvo a hacer el llamado.
 ).subscribe( console.log );
 
 
